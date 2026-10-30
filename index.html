@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seydou Mane – Senior Software Engineer & Consultant Cloud/DevOps</title>
+<meta name="description" content="Senior Software Engineer et consultant Cloud/DevOps freelance : Java/.NET, Azure, AWS, Kubernetes, CI/CD, architecture cloud-native, microservices et IA.">
+<meta property="og:title" content="Seydou Mane – Consultant Cloud/DevOps & Software Engineer">
+<meta property="og:description" content="Java/.NET, Azure, AWS, Kubernetes, CI/CD, microservices, IA. Disponible pour missions freelance.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maneseydou.github.io">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F9; --surface:#FFFFFF; --ink:#0E1B2C; --muted:#4A5A6E;
+  --line:#D5DDE8; --accent:#0B5FFF; --accent-ink:#FFFFFF; --ok:#00806B;
+  --display:"Sora","Segoe UI",system-ui,sans-serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B1522; --surface:#122033; --ink:#E8EEF6; --muted:#9FB0C5;
+    --line:#233650; --accent:#5B9BFF; --accent-ink:#06101D; --ok:#3DD6B8;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B1522; --surface:#122033; --ink:#E8EEF6; --muted:#9FB0C5;
+  --line:#233650; --accent:#5B9BFF; --accent-ink:#06101D; --ok:#3DD6B8;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
+.brand{font:700 1.05rem var(--display);text-decoration:none}
+nav{display:flex;gap:1.25rem;font-size:.98rem;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0}
+.hero{padding:3.5rem 0 3rem}
+h1{font-size:clamp(2.1rem,5.6vw,3.7rem);font-weight:800;letter-spacing:-.02em;max-width:18ch}
+.lead{max-width:38rem;color:var(--muted);font-size:1.2rem;margin:1.25rem 0 0}
+.cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.75rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:.5rem;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.status{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.5rem;color:var(--muted);font-size:.98rem}
+.status i{width:.6rem;height:.6rem;border-radius:50%;background:var(--ok);display:inline-block}
+
+/* Pipeline: la séquence est réelle, c'est le cycle de livraison */
+.pipe{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;padding:0;list-style:none}
+.pipe li{position:relative;padding:.55rem 1rem;background:var(--surface);border:1px solid var(--line);border-radius:.4rem;font:600 .95rem var(--display)}
+.pipe li:not(:last-child)::after{content:"";position:absolute;right:-.5rem;top:50%;width:.5rem;height:2px;background:var(--accent)}
+.pipe li{animation:ping 4s steps(1) infinite}
+.pipe li:nth-child(1){animation-delay:0s}.pipe li:nth-child(2){animation-delay:.6s}
+.pipe li:nth-child(3){animation-delay:1.2s}.pipe li:nth-child(4){animation-delay:1.8s}
+.pipe li:nth-child(5){animation-delay:2.4s}
+@keyframes ping{0%{border-color:var(--accent)}15%,100%{border-color:var(--line)}}
+
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:1.5rem}
+.grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.svc h3{font-size:1.15rem;margin-bottom:.4rem}
+.svc p{margin:0;color:var(--muted)}
+.stack{display:grid;gap:1rem 2rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr))}
+.stack dt{font:700 .98rem var(--display);margin-bottom:.15rem}
+.stack dd{margin:0;color:var(--muted)}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:1.4rem}
+.proj h3{font-size:1.1rem;margin-bottom:.5rem}
+.proj p{margin:.3rem 0;color:var(--muted)}
+.proj b{color:var(--ink)}
+.tags{margin-top:.8rem;font-size:.92rem;color:var(--accent);font-weight:600}
+.contact p{max-width:38rem;color:var(--muted)}
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+button.theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:.4rem;padding:.3rem .7rem;font:inherit;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.pipe li{animation:none}html{scroll-behavior:auto}}
+@media (max-width:40rem){.pipe li:not(:last-child)::after{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="#top">Seydou Mane</a>
+    <nav aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <h1>Du code à la production, sans friction.</h1>
+      <p class="lead">Senior Software Engineer et consultant Cloud/DevOps. Je conçois des applications d’entreprise cloud-native en Java et .NET, je les déploie sur Azure et AWS avec Kubernetes, et j’y intègre l’IA quand elle apporte de la valeur.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Discuter de votre projet</a>
+        <a class="btn ghost" href="#projets">Voir les projets</a>
+      </div>
+      <p class="status"><i aria-hidden="true"></i>Disponible pour des missions freelance</p>
+      <ol class="pipe" aria-label="Cycle de livraison que je mets en place">
+        <li>Code</li><li>Build</li><li>Test</li><li>Déploiement</li><li>Supervision</li>
+      </ol>
+    </div>
+
+    <section id="services">
+      <h2>Ce que je fais pour vous</h2>
+      <div class="grid">
+        <div class="svc"><h3>Applications d’entreprise</h3><p>Conception et développement de services Java (Spring Boot) et .NET, en architecture microservices, testés et maintenables.</p></div>
+        <div class="svc"><h3>Architecture cloud-native</h3><p>Choix d’architecture, découpage en services, migration vers Azure ou AWS, avec un souci constant de coût, de résilience et de sécurité.</p></div>
+        <div class="svc"><h3>DevOps et CI/CD</h3><p>Pipelines automatisés, conteneurs Docker, orchestration Kubernetes et infrastructure as code pour livrer plus souvent et plus sereinement.</p></div>
+        <div class="svc"><h3>Ingénierie IA</h3><p>Intégration de modèles de langage et de recherche documentaire (RAG) dans vos applications, avec des cas d’usage mesurables.</p></div>
+      </div>
+    </section>
+
+    <section id="competences">
+      <h2>Compétences</h2>
+      <dl class="stack">
+        <div><dt>Langages et frameworks</dt><dd>Java, Spring Boot, .NET, Angular, Python</dd></div>
+        <div><dt>Cloud</dt><dd>Azure, AWS</dd></div>
+        <div><dt>Conteneurs et orchestration</dt><dd>Docker, Kubernetes</dd></div>
+        <div><dt>CI/CD et automatisation</dt><dd>Pipelines, GitHub Actions, déploiement continu</dd></div>
+        <div><dt>Architecture</dt><dd>Microservices, cloud-native, applications d’entreprise</dd></div>
+        <div><dt>IA</dt><dd>LLM, agents, RAG</dd></div>
+      </dl>
+    </section>
+
+    <section id="projets">
+      <h2>Projets</h2>
+      <div class="grid">
+        <article class="proj">
+          <h3>Plateforme de jeux Spring Boot et Angular</h3>
+          <p><b>Problème :</b> à compléter.</p>
+          <p><b>Solution :</b> API Spring Boot, interface Angular, tests automatisés.</p>
+          <p class="tags">Java · Spring Boot · Angular</p>
+          <p><a href="https://github.com/maneseydou/formation-spring-boot-angular-jeu-star-wars">Voir le code</a></p>
+        </article>
+        <article class="proj">
+          <h3>Projet CI/CD et conteneurs</h3>
+          <p><b>Problème :</b> à compléter.</p>
+          <p><b>Solution :</b> pipeline de build, image Docker, déploiement sur Kubernetes.</p>
+          <p class="tags">Docker · Kubernetes · CI/CD</p>
+        </article>
+        <article class="proj">
+          <h3>Assistant documentaire IA</h3>
+          <p><b>Problème :</b> à compléter.</p>
+          <p><b>Solution :</b> recherche sémantique et réponses sourcées avec un LLM.</p>
+          <p class="tags">Python · LLM · RAG</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Parlons de votre besoin</h2>
+      <p>Décrivez-moi votre contexte et vos contraintes. Je vous réponds sous 48 heures avec une première approche et une estimation.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:votre.email@exemple.com">Envoyer un email</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/VOTRE-PROFIL" rel="noopener">Voir mon LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="y">2026</span> Seydou Mane</span>
+    <button class="theme" id="t" type="button" aria-label="Changer le thème">Thème clair/sombre</button>
+  </footer>
+</div>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('t').addEventListener('click',function(){
+  var r=document.documentElement,
+      d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+  r.dataset.theme=d?'light':'dark';
+});
+</script>
+</body>
+</html>
